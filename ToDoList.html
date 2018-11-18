@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>To Do List</h1>
+        <input type="text" v-model="item" v-on:keyup.enter="newToDo(item)">
+        <ul>
+            {{item}}
+            <!--this.itemToDo.indexOf(todo)-->
+            <li v-for="todo in itemToDo">{{todo}} - <a href="#" v-on:click="deleteFn(todo)">delete</a></li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="todolist.js"></script>
+</body>
+
+</html>
